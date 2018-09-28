@@ -7,8 +7,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using log4net;
+using Base;
 
-namespace Base
+namespace TrackingServer
 {
     class RaceManager
     {

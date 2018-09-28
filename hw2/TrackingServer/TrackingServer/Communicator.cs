@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Threading;
 using log4net;
 
-namespace Base
+namespace TrackingServer
 {
     public class Communicator
     {
