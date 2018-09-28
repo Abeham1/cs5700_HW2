@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingServer", "TrackingServer\TrackingServer.csproj", "{7C6D0E1D-5CD1-4D41-87BA-0B1AC4AE2E15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE1DEA2F-0B93-4441-BBC0-229B0860E2E2}"
+	ProjectSection(SolutionItems) = preProject
+		TrackingServer\Communicator.cs = TrackingServer\Communicator.cs
+		TrackingServer\CommunicatorTest.cs = TrackingServer\CommunicatorTest.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C6D0E1D-5CD1-4D41-87BA-0B1AC4AE2E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6D0E1D-5CD1-4D41-87BA-0B1AC4AE2E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6D0E1D-5CD1-4D41-87BA-0B1AC4AE2E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6D0E1D-5CD1-4D41-87BA-0B1AC4AE2E15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {416301FE-656D-4FBD-AF81-879B7C37241E}
+	EndGlobalSection
+EndGlobal

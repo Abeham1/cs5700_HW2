@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading;
 using log4net;
 
@@ -19,6 +22,8 @@ namespace Base
         private UdpClient _udpClient;
         private Thread _myThread;
         private bool _keepGoing;
+
+        private RaceManager manager;
 
         /// <summary>
         /// Default Constructor, which opens a UDP socket on any available port
@@ -136,6 +141,7 @@ namespace Base
             _localEndPoint = _udpClient.Client.LocalEndPoint as IPEndPoint;
             LocalPort = _localEndPoint?.Port ?? 0;
             Log.Debug($"Local Port {LocalPort}");
+            manager = new RaceManager();
         }
 
         private void Run()
@@ -147,7 +153,11 @@ namespace Base
                 var message = GetMessage(out senderEndPoint);
                 if (message == null) continue;
                 Log.Debug($"Got a {message} from {senderEndPoint}");
+                Console.WriteLine(message);
+                //Send("Race,Test Race,25000", senderEndPoint);
+                //Send("Athlete, 1881, Abe, Test, M, 25", senderEndPoint);
                 IncomingMessage?.Invoke(message, senderEndPoint);
+                manager.ReceiveMessage(message, senderEndPoint);
             }
             Log.Debug("Communicator Stopped");
         }
